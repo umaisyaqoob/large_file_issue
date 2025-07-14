@@ -1,0 +1,36 @@
+{
+   "action": {
+      "default_icon": {
+         "16": "icons/icon_default.png"
+      },
+      "default_popup": "Popup.html"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "content.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   } ],
+   "description": "Verify Google ReCaptcha V2 automatically with  solving services",
+   "host_permissions": [ "http://api.endcaptcha.com/*", "https://bcsapi.xyz/*", "http://api.deathbycaptcha.com/2captcha/*", "https://2captcha.com/*", "http://imagetyperz.com/*", "https://imagetyperz.com/*", "http://captchatypers.com/*", "https://api.anti-captcha.com/createTask/", "https://api.anti-captcha.com/getTaskResult/", "https://api.solverecaptcha.com/", "https://api.captchadecoder.com/decode" ],
+   "icons": {
+      "128": "icons/icon_default128.png",
+      "16": "icons/icon_default16.png",
+      "48": "icons/icon_default48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzydmNzFl3+OSGVMuA6RsKIeMO+y6FUvGyF+27zOTYetPn1AAM9s9c8Q5yFY2FTYVOrXlTh1h2pLAaR1HQdro2a03EZe7dWmA0um4AiX66TjLIBfXObP+QpgAMOwTgSEI4j2OYMNhBYY7ToBVOjFP/d/gtbRwUrmwa+drce5Z3LwJnhi+9RrKXkm2eYmTjdZcfPhTTVFCD5NvLjAom9m6e/1VmVQedDz2elzCiJEPN0YhEhF25mD82YShv1u7uP0jghrKtEbonmnfjAMYUW/UyyJDbR8sjpKviPZvSCVzez1hznWjlZnvjgmyhrcL2ZK9LIgZsWp1Pi1o/3PDlbiuGQIDAQAB",
+   "manifest_version": 3,
+   "name": "ReCaptcha Solver",
+   "options_ui": {
+      "page": "Popup.html"
+   },
+   "permissions": [ "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "6.5",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "icons/icon.png", "icons/check.png", "page-context.js" ]
+   } ]
+}
